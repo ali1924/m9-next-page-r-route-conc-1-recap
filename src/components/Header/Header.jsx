@@ -12,7 +12,26 @@ const Header = () => {
             </Link>
 
             {/* nav section */}
-            
+            <ul className='lg:flex hidden items-center space-x-8'>
+                <li>
+                    <NavLink
+                        to='/'
+                        className={({isActive})=>(isActive?'text-blue-600':'')}
+                    >Home</NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to='/books'
+                        className={({ isActive }) => (isActive ?'text-blue-600':'')}
+                    >Books</NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to='/about'
+                        className={({ isActive }) => (isActive ?'text-blue-600':'')}
+                    >About Us</NavLink>
+                </li>
+            </ul>
         </div>
     );
 };
